@@ -24,6 +24,7 @@ It is a commonly accepted fact in the AI community that the Automatic Speech Rec
     <img alt="test" src="./images/asr_bias.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
     <span class="img_caption" style="display: block; text-align: center;">Figure 1: Mean word information lost (WIL) for ASR services vs. first language</span>
 </span>
+&nbsp;
 </br>
 We believe that one of the primary reasons for this disparity is that the ASR models are typically trained on large amounts of data, which may consist predominantly of speech from native speakers. This happens due to a lack of labeled audio datasets of non-native speakers speaking a particular language. As a result, the ASR models struggle with recognizing and accurately transcribing non-native accents or variations in pronunciation.
 This problem motivated us to think about some potential ways of generating high volumes of labeled audio data in multiple languages with diversified accents. Now, of course, we can generate high volumes of labled speech by using a text-to-speech system, but it doesn’t solve the problem of accented speech, which is the main issue with the low performance of ASR systems. Guo et. al<sup>2</sup> have recently introduced QuickVC - an any-to-many voice conversion framework using inverse short-time Fourier transforms. QuickVC is trained on English speech, but we wondered if we can use it for generating accented speech in other languages too. We believed that doing so would provide us with a viable option for generating high volumes of labeled audio data with diversified accents that can be used for training or fine-tuning ASR systems.
@@ -32,6 +33,7 @@ This problem motivated us to think about some potential ways of generating high 
     <span class="img_caption" style="display: block; text-align: center;">Figure 2:  Flow design for generating high volume of labeled audio with diversified accents<sup>1</sup></span>
 </span>
 </p>
+&nbsp;
 
 ## <b>Dataset</b>
 <p>
