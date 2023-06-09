@@ -40,13 +40,44 @@ This problem motivated us to think about some potential ways of generating high 
 For the text-to-speech synthesis, we used Qi et. al’s massively multilingual (60 languages) data set derived from TED Talk transcripts<sup>3</sup>. We chose to work with ten of the most common languages around the world, which includes English, Hindi, Spanish, Portuguese, Turkish, Russian, Swedish, Hungarian, Indonesian, and German. For target audio samples, we chose ten different speakers from the VCTK corpus<sup>4</sup>, which contains recordings of speech from 110 English speakers with diverse accents. 
 </p>
 
-## <b>References</b>
+## <b>Results</b>
 
+### <b>Speaker Similarity</b>
 
+| Language      | Cosine Similarity Score |
+| ----------- | ----------- |
+| English      | 0.84       |
+| Hindi   | 0.81        |
+| Spanish | 0.80 |
+| Portuguese | 0.82 |
+| Turkish | 0.82 |
+| Russian | 0.82 |
+| Swedish | 0.82 |
+| Hungarian | 0.80 |
+| Indonesian | 0.80 |
+| German | 0.81 |
 
-<!DOCTYPE html>
-<html>
-  <figure>
+<p>
+The average cosine similarity score for each of the ten languages is 0.8 or higher, which indicates that the QuickVC model, despite being trained on just English speech, is robust enough to successfully convert the styles of non-English audio samples as well.
+</p>
+
+### <b>Word Error Rate</b>
+
+| Language      | WER Source | WER Voice Conversion | 
+| ----------- | ----------- | ----------- | 
+| English      | 0.370       | 0.185 |
+| Hindi | 0.480 | 0.294 |
+| Spanish | 0.317 | 0.153 |
+| Portuguese | 0.319 | 0.131 |
+| Turkish | 0.624 | 0.444 |
+| Russian | 1.025 | 0.310 |
+| Swedish | 0.434 | 0.289 |
+| Hungarian | 0.532 | 0.327 |
+| Indonesian | 0.458 | 0.255 |
+| German | 0.535 | 0.226 |
+
+## <b>Demo</b>
+<figure>
     <figcaption>source audio:</figcaption>
     <audio
         controls
@@ -78,7 +109,13 @@ For the text-to-speech synthesis, we used Qi et. al’s massively multilingual (
             </a>
     </audio>
 </figure>
-</html>
+
+## <b>References</b>
+1. https://doi.org/10.48550/arXiv.2208.01157 
+2. Guo, Houjian, et al. "QuickVC: Many-to-any Voice Conversion Using Inverse Short-time Fourier Transform for Faster Conversion." arXiv preprint arXiv:2302.08296 (2023). 
+3. Ye Qi, Devendra Sachan, Matthieu Felix, Sarguna Padmanabhan, and Graham Neubig. 2018. When and Why Are Pre-Trained Word Embeddings Useful for Neural Machine Translation?. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers), pages 529–535, New Orleans, Louisiana. Association for Computational Linguistics.
+4. Yamagishi, Junichi; Veaux, Christophe; MacDonald, Kirsten. (2019). CSTR VCTK Corpus: English Multi-speaker Corpus for CSTR Voice Cloning Toolkit (version 0.92), [sound]. University of Edinburgh. The Centre for Speech Technology Research (CSTR). https://doi.org/10.7488/ds/2645.
+
 
 
 
