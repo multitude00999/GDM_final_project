@@ -137,8 +137,10 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
 | Indonesian | 0.458 | 0.255 |
 | German | 0.535 | 0.226 |
 
+We can see that for most of the languages, the word error rate was comparable to English, in fact, it was even lower for Spanish and Portuguese. These results indicate that QuickVC is able to preserve the content of different languages after voice conversion despite not being trained on any of those languages.
+
 ## <b>Demo</b>
-### Demo 1: English
+### Demo 1 (a): English
 <figure>
     <figcaption>source audio:</figcaption>
     <audio
@@ -170,6 +172,48 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
             </a>
     </audio>
 </figure>
+
+<p></p>
+<div><br/></div>
+
+### Demo 1 (b): Hindi -> English
+
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_x/source1.wav">
+            <a href="audio/demo_x/source1.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_x/target1.wav">
+            <a href="audio/demo_x/target1.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_x/demo.wav">
+            <a href="audio/demo_x/demo.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+
+In this case, we used an out-of-distribution target voice (in hindi), which wasn't present in QuickVC's training dataset, so the results aren't as good as the other demos. It looks like the model converted the source audio to one of the training voices which was closer to the target audio.
+
+<p></p>
+<div><br/></div>
 
 ### Demo 2: Hindi
 
