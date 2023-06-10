@@ -176,7 +176,7 @@ We can see that for most of the languages, the word error rate was comparable to
 <p></p>
 <div><br/></div>
 
-### Demo 1 (b): Hindi -> English
+### Demo 1 (b): English (with Hindi target audio)
 
 <figure>
     <figcaption>source audio:</figcaption>
