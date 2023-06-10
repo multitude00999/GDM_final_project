@@ -37,7 +37,7 @@ This problem motivated us to think about some potential ways of generating high 
 
 ## <b>Framework</b> 
 <span class="img_container center" style="display: block;">
-    <img alt="test" src="./images/framework.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
+    <img alt="test" src="./images/framework_flow.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
     <span class="img_caption" style="display: block; text-align: center;">Figure 3: Framework</span>
 </span>
 
