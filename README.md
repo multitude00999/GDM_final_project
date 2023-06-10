@@ -24,8 +24,10 @@ It is a commonly accepted fact in the AI community that the Automatic Speech Rec
     <img alt="test" src="./images/asr_bias.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
     <span class="img_caption" style="display: block; text-align: center;">Figure 1: Mean word information lost (WIL) for ASR services vs. first language</span>
 </span>
-<div></div>
-<div></div>
+</p>
+&nbsp;
+&nbsp;
+<p>
 We believe that one of the primary reasons for this disparity is that the ASR models are typically trained on large amounts of data, which may consist predominantly of speech from native speakers. This happens due to a lack of labeled audio datasets of non-native speakers speaking a particular language. As a result, the ASR models struggle with recognizing and accurately transcribing non-native accents or variations in pronunciation.
 This problem motivated us to think about some potential ways of generating high volumes of labeled audio data in multiple languages with diversified accents. Now, of course, we can generate high volumes of labled speech by using a text-to-speech system, but it doesn’t solve the problem of accented speech, which is the main issue with the low performance of ASR systems. Guo et. al<sup>2</sup> have recently introduced QuickVC - an any-to-many voice conversion framework using inverse short-time Fourier transforms. QuickVC is trained on English speech, but we wondered if we can use it for generating accented speech in other languages too. We believed that doing so would provide us with a viable option for generating high volumes of labeled audio data with diversified accents that can be used for training or fine-tuning ASR systems.
 <span class="img_container center" style="display: block;">
@@ -33,6 +35,7 @@ This problem motivated us to think about some potential ways of generating high 
     <span class="img_caption" style="display: block; text-align: center;">Figure 2:  Flow design for generating high volume of labeled audio with diversified accents<sup>1</sup></span>
 </span>
 </p>
+&nbsp;
 &nbsp;
 
 ## <b>Framework</b> 
@@ -47,22 +50,51 @@ For the text-to-speech synthesis, we used Qi et. al’s massively multilingual (
 </p>
 
 ## <b>Evaluation</b>
+We wanted to evaluate our framework for two different tasks: 
+1. How well the model was able to copy the target speaker's voice (Speaker Similarity).
+2. How much of the original content was preserved in the generated speech (Word Error Rate).
+
+### <b>Speaker Similarity</b>
+<p>
+In order to measure the speaker similarity score for each language, we took the target and generated speech pairs and calculated their speaker embeddings with the help of a pre-trained voice encoder<sup>5</sup>. Then, we calculated the cosine similarity between the embedding pairs and finally averaged the score across all such pairs for a particular language. Cosine similarti score ranges from -1 to 1, where:
+a. 1 indicates that the vectors are perfectly similar or identical.
+
+b. 0 indicates no similarity between the vectors.
+
+c. -1 indicates that the vectors are perfectly dissimilar or opposite.
+</p>
 
 <span class="img_container center" style="display: block;">
     <img alt="test" src="./images/similarity_measure.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
     <span class="img_caption" style="display: block; text-align: center;">Figure 4: Speaker Similarity Measure</span>
 </span>
 <div><br/></div>
-<span class="img_container center" style="display: block;">
-    <img alt="test" src="./images/wer_source.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
-    <span class="img_caption" style="display: block; text-align: center;">Figure 5: Word Error Rate (WER) - Source</span>
-</span>
 
+### <b>Word Error Rate (WER)</b>
+<p>
+Since QuickVC was never trained on any other language except for English, we were interested in knowing how well it would preserve the content of the source audio in different languages. So, we decided to calculate the word error rate (WER) for the generated speech. WER is a common metric of the performance of an automatic speech recognition system. This value indicates the percentage of words that were incorrectly predicted. The lower the value, the better the performance of the ASR system with a WER of 0 being a perfect score. To calculate this, we utilized Meta's massively multilingual speech ASR<sup>6</sup> to generate text tokens for the TTS output as well as the QuickVC output, and then we calculated the word error rate between the two sets of text tokens using JiWER<sup>7</sup> - a simple and fast python package to evaluate automatic speech recognition systems.
+</p>
 <div><br/></div>
 <span class="img_container center" style="display: block;">
     <img alt="test" src="./images/wer_vc.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
-    <span class="img_caption" style="display: block; text-align: center;">Figure 6: Word Error Rate (WER) - Voice Conversion</span>
+    <span class="img_caption" style="display: block; text-align: center;">Figure 5: Word Error Rate (WER) - Voice Conversion</span>
 </span>
+<div><br/></div>
+<p>
+We also calculated the word error rate between the TTS output and the original text prompt to account for the errors introduced by the Meta's TTS system.
+</p>
+<div><br/></div>
+<span class="img_container center" style="display: block;">
+    <img alt="test" src="./images/wer_source.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
+    <span class="img_caption" style="display: block; text-align: center;">Figure 6: Word Error Rate (WER) - Source</span>
+</span>
+<div><br/></div>
+<p>
+Our assumption was that the model will perform well for English content, since it was trained only on English speech. But, we also assumed a significantly worse performance for other languages for the same reason. To our surprise, the model performed decently with other languages as well. The scores are discussed further in detail under the Results section.
+</p>
+
+<div><br/></div>
+
 
 ## <b>Results</b>
 
@@ -139,6 +171,9 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
 2. Guo, Houjian, et al. "QuickVC: Many-to-any Voice Conversion Using Inverse Short-time Fourier Transform for Faster Conversion." arXiv preprint arXiv:2302.08296 (2023). 
 3. Ye Qi, Devendra Sachan, Matthieu Felix, Sarguna Padmanabhan, and Graham Neubig. 2018. When and Why Are Pre-Trained Word Embeddings Useful for Neural Machine Translation?. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers), pages 529–535, New Orleans, Louisiana. Association for Computational Linguistics.
 4. Yamagishi, Junichi; Veaux, Christophe; MacDonald, Kirsten. (2019). CSTR VCTK Corpus: English Multi-speaker Corpus for CSTR Voice Cloning Toolkit (version 0.92), [sound]. University of Edinburgh. The Centre for Speech Technology Research (CSTR). https://doi.org/10.7488/ds/2645.
+5. https://github.com/resemble-ai/Resemblyzer
+6. https://github.com/facebookresearch/fairseq/tree/main/examples/mms
+7. https://github.com/jitsi/jiwer/tree/master
 
 
 
