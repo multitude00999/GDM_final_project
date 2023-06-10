@@ -48,6 +48,22 @@ For the text-to-speech synthesis, we used Qi et. al’s massively multilingual (
 
 ## <b>Evaluation</b>
 
+<span class="img_container center" style="display: block;">
+    <img alt="test" src="./images/similarity_measure.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
+    <span class="img_caption" style="display: block; text-align: center;">Figure 4: Speaker Similarity Measure</span>
+</span>
+<div><br/></div>
+<span class="img_container center" style="display: block;">
+    <img alt="test" src="./images/wer_source.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
+    <span class="img_caption" style="display: block; text-align: center;">Figure 5: Word Error Rate (WER) - Source</span>
+</span>
+
+<div><br/></div>
+<span class="img_container center" style="display: block;">
+    <img alt="test" src="./images/wer_vc.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
+    <span class="img_caption" style="display: block; text-align: center;">Figure 6: Word Error Rate (WER) - Voice Conversion</span>
+</span>
+
 ## <b>Results</b>
 
 ### <b>Speaker Similarity</b>
