@@ -208,7 +208,21 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
 <p></p>
 <div><br/></div>
 
-### Demo 3: Spanish -> French
+### Demo 3: Spanish
+
+### Demo 4: Portuguese
+
+### Demo 5: Turkish
+
+### Demo 6: Russian
+
+### Demo 7: Swedish
+
+### Demo 8: Hungarian
+
+### Demo 9: Indonesian
+
+### Demo 10: German
 
 ## <b>References</b>
 1. https://doi.org/10.48550/arXiv.2208.01157 
