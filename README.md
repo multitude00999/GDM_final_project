@@ -22,7 +22,7 @@ It is a commonly accepted fact in the AI community that the Automatic Speech Rec
 
 <span class="img_container center" style="display: block;">
     <img alt="test" src="./images/asr_bias.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
-    <span class="img_caption" style="display: block; text-align: center;">Figure 1: Mean word information lost (WIL) for ASR services vs. first language</span>
+    <span class="img_caption" style="display: block; text-align: center;">Figure 1: Mean word information lost (WIL) for ASR services vs. first language<sup>1</sup></span>
 </span>
 </p>
 &nbsp;
@@ -32,7 +32,7 @@ We believe that one of the primary reasons for this disparity is that the ASR mo
 This problem motivated us to think about some potential ways of generating high volumes of labeled audio data in multiple languages with diversified accents. Now, of course, we can generate high volumes of labled speech by using a text-to-speech system, but it doesn’t solve the problem of accented speech, which is the main issue with the low performance of ASR systems. Guo et. al<sup>2</sup> have recently introduced QuickVC - an any-to-many voice conversion framework using inverse short-time Fourier transforms. QuickVC is trained on English speech, but we wondered if we can use it for generating accented speech in other languages too. We believed that doing so would provide us with a viable option for generating high volumes of labeled audio data with diversified accents that can be used for training or fine-tuning ASR systems.
 <span class="img_container center" style="display: block;">
     <img alt="test" src="./images/initial_flow_design.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
-    <span class="img_caption" style="display: block; text-align: center;">Figure 2:  Flow design for generating high volume of labeled audio with diversified accents<sup>1</sup></span>
+    <span class="img_caption" style="display: block; text-align: center;">Figure 2:  Flow design for generating high volume of labeled audio with diversified accents</span>
 </span>
 </p>
 &nbsp;
@@ -138,7 +138,7 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
 | German | 0.535 | 0.226 |
 
 ## <b>Demo</b>
-### Demo 1
+### Demo 1: English -> English
 <figure>
     <figcaption>source audio:</figcaption>
     <audio
@@ -166,6 +166,40 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
         controls
         src="audio/demo_1/quickVCeng.wav">
             <a href="audio/demo_1/quickVCeng.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+
+### Demo 2: Hindi -> English
+
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_2/hin.wav">
+            <a href="audio/demo_2/hin.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_2/p312_177.wav">
+            <a href="audio/demo_2/p312_177.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_2/quickVCeng.wav">
+            <a href="audio/demo_2/quickVCeng.wav">
                 Download audio
             </a>
     </audio>
