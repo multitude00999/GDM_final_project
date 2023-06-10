@@ -209,6 +209,39 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
 <div><br/></div>
 
 ### Demo 3: Spanish
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_3/spa.wav">
+            <a href="audio/demo_3/spa.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_3/p374_004.wav">
+            <a href="audio/demo_3/p374_004.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_3/quickVCspa.wav">
+            <a href="audio/demo_3/quickVspa.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+<p></p>
+<div><br/></div>
 
 ### Demo 4: Portuguese
 
