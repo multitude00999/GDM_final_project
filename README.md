@@ -38,11 +38,16 @@ This problem motivated us to think about some potential ways of generating high 
 &nbsp;
 &nbsp;
 
-## <b>Framework</b> 
+## <b>Framework</b>
+<p>
+Our flow starts with an input text in one of the ten selected languages. We feed this input text to Meta's text-to-speech (TTS) model<sup>6</sup>, which then generates a synthetic audio signal with the given text as the content. This audio signal serves as a source speech to the QuickVC voice conversion model. Then, we use ten different audio samples from the VCTK dataset as the target speech signals and feed them one by one to the QuickVC model along with the source audio to generate new speech signals having the content of the source audio and the style of the target audio. We ran this experiment for ten different languages, each having a hundred different prompts. In total, we generated 10 (languages) * 100 (prompts) * 10 (target speakers) = 10,000 speech signals.
+</p> 
+<div><br/></div>
 <span class="img_container center" style="display: block;">
     <img alt="test" src="./images/framework_flow.png?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
     <span class="img_caption" style="display: block; text-align: center;">Figure 3: Framework</span>
 </span>
+<div><br/></div>
 
 ## <b>Dataset</b>
 <p>
