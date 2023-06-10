@@ -235,7 +235,7 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
     <audio
         controls
         src="audio/demo_3/quickVCspa.wav">
-            <a href="audio/demo_3/quickVspa.wav">
+            <a href="audio/demo_3/quickVCspa.wav">
                 Download audio
             </a>
     </audio>
@@ -245,17 +245,262 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
 
 ### Demo 4: Portuguese
 
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_4/por.wav">
+            <a href="audio/demo_4/por.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_4/p252_003.wav">
+            <a href="audio/demo_4/p252_003.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_4/quickVCpor.wav">
+            <a href="audio/demo_4/quickVCpor.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+
+<p></p>
+<div><br/></div>
+
 ### Demo 5: Turkish
+
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_5/tur.wav">
+            <a href="audio/demo_5/tur.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_5/p225_001.wav">
+            <a href="audio/demo_5/p225_001.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_5/quickVCtur.wav">
+            <a href="audio/demo_5/quickVCtur.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+
+<p></p>
+<div><br/></div>
 
 ### Demo 6: Russian
 
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_6/rus.wav">
+            <a href="audio/demo_6/rus.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_6/p226_005.wav">
+            <a href="audio/demo_6/p226_005.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_6/quickVCrus.wav">
+            <a href="audio/demo_6/quickVCrus.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+
+<p></p>
+<div><br/></div>
+
 ### Demo 7: Swedish
+
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_7/swe.wav">
+            <a href="audio/demo_7/swe.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_7/p229_003.wav">
+            <a href="audio/demo_7/p229_003.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_7/quickVCswe.wav">
+            <a href="audio/demo_7/quickVCswe.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+
+<p></p>
+<div><br/></div>
 
 ### Demo 8: Hungarian
 
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_8/hun.wav">
+            <a href="audio/demo_8/hun.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_8/p246_198.wav">
+            <a href="audio/demo_8/p246_198.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_8/quickVChun.wav">
+            <a href="audio/demo_8/quickVChun.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+
+<p></p>
+<div><br/></div>
+
 ### Demo 9: Indonesian
 
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_3/ind.wav">
+            <a href="audio/demo_3/ind.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_9/p334_304.wav">
+            <a href="audio/demo_9/p334_304.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_9/quickVCind.wav">
+            <a href="audio/demo_9/quickVCind.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+
+<p></p>
+<div><br/></div>
+
 ### Demo 10: German
+
+<figure>
+    <figcaption>source audio:</figcaption>
+    <audio
+        controls
+        src="audio/demo_10/deu.wav">
+            <a href="audio/demo_10/deu.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>    
+<figure>
+    <figcaption>target speaker:</figcaption>
+    <audio
+        controls
+        src="audio/demo_10/p351_003.wav">
+            <a href="audio/demo_10/p351_003.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+    
+<figure>
+    <figcaption>output:</figcaption>
+    <audio
+        controls
+        src="audio/demo_10/quickVCdeu.wav">
+            <a href="audio/demo_10/quickVdeu.wav">
+                Download audio
+            </a>
+    </audio>
+</figure>
+
+<p></p>
+<div><br/></div>
 
 ## <b>References</b>
 1. https://doi.org/10.48550/arXiv.2208.01157 
