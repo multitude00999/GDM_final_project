@@ -138,7 +138,7 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
 | German | 0.535 | 0.226 |
 
 ## <b>Demo</b>
-### Demo 1: English -> English
+### Demo 1: English
 <figure>
     <figcaption>source audio:</figcaption>
     <audio
@@ -171,7 +171,7 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
     </audio>
 </figure>
 
-### Demo 2: Hindi -> English
+### Demo 2: Hindi
 
 <figure>
     <figcaption>source audio:</figcaption>
@@ -198,12 +198,17 @@ The average cosine similarity score for each of the ten languages is 0.8 or high
     <figcaption>output:</figcaption>
     <audio
         controls
-        src="audio/demo_2/quickVCeng.wav">
-            <a href="audio/demo_2/quickVCeng.wav">
+        src="audio/demo_2/quickVChin.wav">
+            <a href="audio/demo_2/quickVChin.wav">
                 Download audio
             </a>
     </audio>
 </figure>
+
+<p></p>
+<div><br/></div>
+
+### Demo 3: Spanish -> French
 
 ## <b>References</b>
 1. https://doi.org/10.48550/arXiv.2208.01157 
